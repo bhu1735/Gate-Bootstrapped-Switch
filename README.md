@@ -90,14 +90,14 @@ Sizing of the transistors during the gate-boostrapped switch design was quite ch
 
 # Conclusions:
 
-# ACKNOWLEDGEMENT:  
+# Acknowledgement:  
 1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
 2) [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)    
 3) I would like to thank [Synopsys](https://www.synopsys.com/) Team/Company for providing access to the server and 28nm iPDK CMOS library for implementing the design.
 4) I would also like to thank Mr. Sameer Durgoji, NIT Karnataka and Chinmay Panda, IIT Hyderabad for providing necessary video tutorials to use Synopsys custom compiler with ease.  
 5) Lastly, I appreciate the TAs for clarifying my doubts without whom this work would not have been made presentable.  
 
-# REFERENCES:
+# References:  
 1) A. M. Abo and P. R. Gray, "A 1.5-V, 10-bit, 14.3-MS/s CMOS pipeline analog-to-digital converter," in IEEE Journal of Solid-State Circuits, vol. 34, no. 5, pp. 599-606, May 1999.  
 2) D. Aksin, M. Al-Shyoukh and F. Maloberti, "Switch Bootstrapping for Precise Sampling Beyond Supply Voltage," in IEEE Journal of Solid-State Circuits, vol. 41, no. 8, pp. 1938-1943, Aug. 2006  
 3) B. Razavi, “The Bootstrapped Switch [A Circuit for All Seasons]”, in IEEE Solid-State Circuits Magazine, vol. 7, no. 3, pp. 12-15, Summer 2015  
