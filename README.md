@@ -96,6 +96,164 @@ The transient setting are shown below:
 The required waveforms generated are shown below:  
 
 # Netlist:  
+*  Generated for: PrimeSim
+*  Design library name: Bootstrapped_Switch
+*  Design cell name: Track_Hold_new_tb
+*  Design view name: schematic
+.lib '/PDK/SAED_PDK32nm/hspice/saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 17:54:10 2022
+
+.global gnd!
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter in out
+xm0 out in gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm1 out in net9 net9 p105 w=0.25u l=0.03u nf=1 m=1
+v2 net9 gnd! dc=1.05
+.ends inverter
+
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Track_Hold_new
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt track_hold_new clk vdd vin vout
+xm12 vdd net6 net5 net5 n105 w=0.1u l=0.03u nf=1 m=1
+xm11 vdd net5 net6 net6 n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net2 clk_bar gnd! gnd! n105 w=0.175000m l=0.03u nf=50 m=1
+xm9 vdd net5 net3 net3 n105 w=0.15u l=0.03u nf=1 m=1
+xm7 net1 clk_bar gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm6 vgate vdd net1 net1 n105 w=0.1u l=0.03u nf=1 m=1
+xm4 net4 clk net2 net2 n105 w=0.1u l=0.03u nf=1 m=1
+xm2 vin vgate net2 net2 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 vout vgate vin vin n105 w=0.1u l=0.03u nf=1 m=1
+xm3 net4 vgate net2 net2 n105 w=0.1u l=0.03u nf=1 m=1
+xm8 vgate net4 net3 net3 p105 w=0.15u l=0.03u nf=1 m=1
+xm5 net4 clk vdd vdd p105 w=0.25u l=0.03u nf=1 m=1
+c15 net3 net2 c=10p
+c14 net5 clk_bar c=1p
+c13 net6 net7 c=1p
+xi21 clk_bar net7 inverter
+xi20 clk clk_bar inverter
+.ends track_hold_new
+
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Track_Hold_new_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 clk net7 vin vout track_hold_new
+v2 clk gnd! dc=0 pulse ( 0 1.05 2.5u 40p 40p 2.5u 5u )
+v3 vin gnd! dc=0 sin ( 0.525 0.525 10k 0 0 0 )
+v1 net7 gnd! dc=1.05
+c4 vout gnd! c=5p
+
+
+
+
+
+
+
+
+.tran '1u' '200u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(clk) v(vin) v(vout)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
+
+
+
+*  Generated for: PrimeSim
+*  Design library name: Bootstrapped_Switch
+*  Design cell name: Inverter_tb
+*  Design view name: schematic
+.lib '/PDK/SAED_PDK32nm/hspice/saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 18:21:21 2022
+
+.global gnd!
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter in out
+xm0 out in gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm1 out in net9 net9 p105 w=0.25u l=0.03u nf=1 m=1
+v2 net9 gnd! dc=1.05
+.ends inverter
+
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Inverter_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 in out inverter
+v1 in gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 5u 10u )
+c2 out gnd! c=1p
+
+
+
+
+
+
+
+
+.tran '1u' '20u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(in) v(out)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
 
 
 # Observations:  
