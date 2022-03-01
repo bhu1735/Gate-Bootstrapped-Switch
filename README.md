@@ -17,7 +17,6 @@ In the current era of information, analog domain has become a challenging and an
   - [Gate-Boostrapped Switch](#gate-boostrapped-switch)  
 - [Netlist](#netlist)
 - [Observations](#observations)
-- [Limitations](#limitations)
 - [Summary](#summary)  
 - [Acknowledgement](#acknowledgement) 
 - [References](#references) 
@@ -146,9 +145,9 @@ The required waveforms generated are shown below:
 <img width="960" alt="Switch_results3" src="https://user-images.githubusercontent.com/88243788/156241723-3bee03f0-ebfe-403e-98f8-6b12a150c8ff.png">
 
 # Netlist:  
-The netlist for inverter can be found here [Netlist_Inverter.txt](https://github.com/bhu1735/Gate-Bootstrapped-Switch/files/8164538/Netlist_Inverter.txt)  
+The netlist for inverter can be found here: [Netlist_Inverter.txt](https://github.com/bhu1735/Gate-Bootstrapped-Switch/files/8164538/Netlist_Inverter.txt)  
 
-The netlist for gate-boostrapped switch can be found here [Netlist_Switch.txt](https://github.com/bhu1735/Gate-Bootstrapped-Switch/files/8164545/Netlist_Switch.txt)  
+The netlist for gate-boostrapped switch can be found here: [Netlist_Switch.txt](https://github.com/bhu1735/Gate-Bootstrapped-Switch/files/8164545/Netlist_Switch.txt)  
 
 # Observations:  
 As can be observed from the simulations plots, the circuit switch tracks the input signal during one-half of clock cycle and holds the value during other half which was expected from theory.  
@@ -160,8 +159,6 @@ Some challenges associated with the bootstrapped switch are:
 3) Clock Feedthrough: During clock transition from HIGH to LOW, there is some overlap capacitance between gate and drain. This capacitance Cov forms a voltage divider with CH which again causes change in the actual voltage of the capacitor output. Different voltage value gets digitized due to clock transitions.  
 
 NOTE: By increasing the capacitance CH, one can mitigate the above two affects at the cost of reduced bandwidth.  
-
-# Limitations:  
 
 # Conclusions:  
 As a part of this cloud-based analog ic design hackathon, a gate-boostrapped switch has been designed using 28nm Synopsys iPDK library. The output tracks the input waveform during one-half of the clock cycle and holds the value during other half.  
