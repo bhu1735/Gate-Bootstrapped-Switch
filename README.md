@@ -97,6 +97,69 @@ The required waveforms generated are shown below:
 
 # Netlist:  
 
+*  Generated for: PrimeSim
+*  Design library name: Bootstrapped_Switch
+*  Design cell name: Inverter_tb
+*  Design view name: schematic
+.lib '/PDK/SAED_PDK32nm/hspice/saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 16:46:03 2022
+
+.global gnd!
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter in out
+xm0 out in gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm1 out in net9 net9 p105 w=0.25u l=0.03u nf=1 m=1
+v2 net9 gnd! dc=1.05
+.ends inverter
+
+********************************************************************************
+* Library          : Bootstrapped_Switch
+* Cell             : Inverter_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 in out inverter
+v1 in gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 5u 10u )
+c2 out gnd! c=1p
+
+
+
+
+
+
+
+
+.tran '1u' '20u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(in) v(out)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
 
 # Observations:  
 As can be observed from the simulations plots, the circuit switch tracks the input signal during one-half of clock cycle and holds the value during other half which was expected from theory.  
