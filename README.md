@@ -169,7 +169,7 @@ As a part of this cloud-based analog ic design hackathon, a gate-boostrapped swi
 1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
 2) [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)    
 3) I would like to thank [Synopsys](https://www.synopsys.com/) Team/Company for providing access to the server and 28nm iPDK CMOS library for implementing the design.
-4) I would also like to thank Mr. Sameer Durgoji, NIT Karnataka and Chinmay Panda, IIT Hyderabad for providing necessary video tutorials to use Synopsys custom compiler with ease.  
+4) I would also like to thank Mr. Sameer Durgoji, NIT Karnataka and Mr. Chinmay Panda, IIT Hyderabad for providing necessary video tutorials to use Synopsys custom compiler with ease.  
 5) Lastly, I appreciate the TAs for clarifying my doubts without whom this work would not have been made presentable.  
 
 # References:  
