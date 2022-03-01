@@ -73,27 +73,65 @@ We shall now look into the circuit schematics of above design and simulate it us
 ## Inverter:  
 The schematic of inverter is as shown below:  
 
+<img width="397" alt="Inv_circuit" src="https://user-images.githubusercontent.com/88243788/156240838-719de82f-a0a5-40f8-9564-adb715b44df3.png">
+
 The symbol for the same is shown below:  
+
+<img width="370" alt="Inv_symbol" src="https://user-images.githubusercontent.com/88243788/156240915-072707b0-b19b-4cf8-9ce4-a16ea403986d.png">
 
 ## Gate-Bootstrapped Switch:  
 The schematic of gate-bootstrapped switch is as shown below:  
 
+<img width="582" alt="Switch_circuit" src="https://user-images.githubusercontent.com/88243788/156240979-4f558412-c737-43b4-82ad-aaf6798f20bf.png">
+
 The symbol for the same is shown below:  
+
+<img width="463" alt="Switch_symbol" src="https://user-images.githubusercontent.com/88243788/156241012-8ddcfb88-a7fd-4d50-84cc-2932e361e3cd.png">
 
 # Simulation Analysis:  
 ## Inverter:  
-To test the functionality of the inverter, the parameter for the souce at the input is shown below:  
+The testbench for the inverter is as shown below:  
 
-The transient setting are shown below:  
+<img width="524" alt="Inv_tb" src="https://user-images.githubusercontent.com/88243788/156241137-e9df7b5f-ed17-40ca-96a1-eeefe7d3f0c0.png">
+
+To test the functionality of the inverter, the parameter for the source at the input is shown below:  
+
+<img width="148" alt="Inv_input" src="https://user-images.githubusercontent.com/88243788/156241173-471dd506-8ea6-4560-a35c-d61056abc64d.png">
+
+The transient settings are shown below:  
+
+<img width="341" alt="Inv_analysis" src="https://user-images.githubusercontent.com/88243788/156241257-8b5b46bd-81aa-40d1-b7c2-6456b180dcb5.png">
+
+<img width="960" alt="Inv_analysis2" src="https://user-images.githubusercontent.com/88243788/156241338-fa97ed62-c905-4458-b392-3ce4924915f1.png">
 
 The required waveforms generated are shown below:  
+
+<img width="960" alt="Inv_results" src="https://user-images.githubusercontent.com/88243788/156241291-2c585b02-92d6-498a-ad24-ad63a0d9c914.png">
 
 ## Gate-Bootstrapped Switch:  
-To test the functionality of the inverter, the parameter for the souce at the input is shown below:  
+The testbench for the inverter is as shown below:  
 
-The transient setting are shown below:  
+<img width="434" alt="Switch_tb" src="https://user-images.githubusercontent.com/88243788/156241420-8917a9c8-c343-4905-9be7-cb27294de490.png">
+
+To test the functionality of the inverter, the parameters for the various sources are shown below:  
+
+<img width="148" alt="Switch_vdc" src="https://user-images.githubusercontent.com/88243788/156241534-c72f221a-f13c-47a8-9817-8d3b2ecc75cd.png">
+
+<img width="148" alt="Switch_clk" src="https://user-images.githubusercontent.com/88243788/156241570-c40b0c1c-dcd8-4bf3-8131-5829edacca74.png">
+
+<img width="148" alt="Switch_input" src="https://user-images.githubusercontent.com/88243788/156241587-d68c98e9-9e0e-4340-919d-077885bfb660.png">
+
+The transient settings are shown below:  
+
+<img width="340" alt="Switch_analysis" src="https://user-images.githubusercontent.com/88243788/156241645-39a9280e-4e0a-47d5-8748-56c2b37cfdf7.png">
 
 The required waveforms generated are shown below:  
+
+<img width="960" alt="Switch_results" src="https://user-images.githubusercontent.com/88243788/156241680-981ca1c8-7282-408f-b106-1f5bb7baab8d.png">
+
+<img width="960" alt="Switch_results2" src="https://user-images.githubusercontent.com/88243788/156241699-6334ea99-0d62-4821-8d82-90f5eb566ead.png">
+
+<img width="960" alt="Switch_results3" src="https://user-images.githubusercontent.com/88243788/156241723-3bee03f0-ebfe-403e-98f8-6b12a150c8ff.png">
 
 # Netlist:  
 *  Generated for: PrimeSim
