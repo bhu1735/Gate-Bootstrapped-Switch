@@ -33,11 +33,6 @@ Since 1950s, transistors have been used as switches in analog circuits. They fin
   <img width="168" alt="Equation" src="https://user-images.githubusercontent.com/88243788/156207030-c2d50d27-ac09-4262-8e72-2c4f52c40df0.PNG">  
 </p>
 
-
-
-
-R_ON=1/(μ_n C_ox (W/L)(V_GS-V_TH ) )  
-
 However, such devices exhibit an input-dependent ON-resistance RON, thereby introducing distortion. Such switches are non-linear in nature and require modifications to linearize the switch. The only way the ON resistance of the switch is going to be constant is by making sure that the gate to source voltage VGS is constant for all values of input voltage. This technique is called “bootstrapping” that helps minimize the variation in RON with input voltage.  
 
 Bootstrapping is a widely used technique in analog to digital converters (ADCs). In high speed ADCs, it is important to collect precise sample values in a very short time to get a digital output and ensure an accurate charging of the sampling capacitor. In this regards, a gate-bootstrapped switch was designed that uses Nakagome charge pump that acts as a voltage shifter or doubler.  
@@ -93,7 +88,12 @@ The required waveforms generated are shown below:
 # Observations:
 
 # Challenges:
-Sizing of the transistors during the gate-boostrapped switch design was quite challenging to get the required waveforms.
+Some challenges associated with the bootstrapped switch are:  
+1) Sizing of the transistors during the gate-boostrapped switch design was quite challenging to get the required waveforms.  
+2) Charge Injection: When clock is goes from HIGH to LOW, the charge that was present in the channel (when clock was HIGH), escapes to the source and drain side of the switch M1. So, some amount of charge will get deposited on the hold capacitance C1 of Figure 3. This causes change in the actual voltage of the capacitor that is meant to be digitized as additional charges (due to charge leakage) get deposited on C1. One can use a dummy switch in series to M1 to reduce this affect. The dummy switch and M1 operate with out-of-phase clocks.  
+3) Clock Feedthrough: During clock transition from HIGH to LOW, there is some overlap capacitance between gate and drain. This capacitance VOV forms a voltage divider with C1 which again causes change in the actual voltage of the capacitor output. Different voltage value gets digitized due to clock transitions.  
+
+NOTE: By increasing the capacitance C1, one can mitigate the above two affects at the cost of reduced bandwidth.  
 
 # Limitations:
 
