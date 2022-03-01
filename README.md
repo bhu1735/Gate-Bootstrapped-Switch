@@ -23,44 +23,6 @@ In the current era of information, analog domain has become a challenging and an
 - [References](#references) 
   
 
-- [Day 1](#day-1):  
-  - [PLL Theory](#pll-theory)  
-  - [Phase-Frequency Detector (PFD)](#phase-frequency-detector-pfd)  
-  - [Charge Pump (CP)](#charge-pump-cp)  
-  - [Loop Filter](#loop-filter)  
-  - [Voltage Controlled Oscillator (VCO)](#voltage-controlled-oscillator-vco)  
-  - [Frequency Divider (FD)](#frequency-divider-fd)  
-  - [Terminologies in PLL](#terminologies-in-pll)
-  - [Tool Setup](#tool-setup)  
-  - [Development Flow](#development-flow)  
-  - [PLL Specifications](#pll-specifications)  
-- [Day 2: Simulations](#day-2-simulations):  
-  - [Pre-Layout Simulations](#pre-layout-simulations)  
-    - [Phase-Frequency Detector (PFD)](#phase-frequency-detector-pfd-1)  
-    - [Charge Pump (CP)](#charge-pump-cp-1)  
-    - [Voltage Controlled Oscillator (VCO)](#voltage-controlled-oscillator-vco-1)  
-    - [Frequency Divider (FD)](#frequency-divider-fd-1)  
-    - [PLL System](#pll-system)
-    - [Troubleshooting Steps](#troubleshooting-steps)  
-  - [Layout Design](#layout-design)  
-    - [Phase-Frequency Detector (PFD)](#phase-frequency-detector-pfd-2)  
-    - [Charge Pump (CP)](#charge-pump-cp-2)  
-    - [Voltage Controlled Oscillator (VCO)](#voltage-controlled-oscillator-vco-2)  
-    - [Frequency Divider (FD)](#frequency-divider-fd-2)  
-    - [MUX](#mux)  
-    - [PLL System](#pll-system)  
-  - [Post-Layout Simulations](#post-layout-simulations)  
-    - [Phase-Frequency Detector (PFD)](#phase-frequency-detector-pfd-3)  
-    - [Charge Pump (CP)](#charge-pump-cp-3)  
-    - [Voltage Controlled Oscillator (VCO)](#voltage-controlled-oscillator-vco-3)  
-    - [Frequency Divider (FD)](#frequency-divider-fd-3)  
-    - [PLL System](#pll-system)  
-  - [Tapeout](#tapeout)  
-- [Summary](#summary)  
-- [Acknowledgement](#acknowledgement) 
-- [References](#references) 
-  
-
 # Abstract:  
 Switches form one of the main building blocks of many analog systems. They help to track and hold values of input continuous time data that is then analyzed digitally. In this paper, we have designed a gate bootstrapped switch for a sample and hold circuit using 28nm Synopsys iPDK.  
 
