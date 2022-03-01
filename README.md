@@ -42,7 +42,8 @@ In the current era of information, analog domain has become a challenging and an
     - [PLL System](#pll-system)  
   - [Tapeout](#tapeout)  
 - [Summary](#summary)  
-- [Acknowledgement](#acknowledgement)  
+- [Acknowledgement](#acknowledgement) 
+- [References](#references) 
   
 
 # Day 1:  
@@ -406,7 +407,13 @@ The caravel user project area contains the input-output pins (fixed) along the b
 In this workshop, we started with the basic understanding of the various blocks used to design a phase-locked loop (PLL) system. Circuits were designed based on established specifications to get desired response. This was followed by pre-layout simulations using ngspice to the confirm the expected results and debug the individual components in case of error. However, in doing this, we chose to neglect the effect of the interconnections (length, width, area), mismatch, etc. As such, a layout of the circuit was designed using magic tool which was followed by parasitic extractions. This generated a SPICE netlist of the entire circuit. Post-layout simulations were then carried out which gave a more accurate result for the PLL. Finally, to make the PLL IP tapeout ready, the final layout design was prepared using caravel soc template provided by efabless. The design was placed on the user's project area and connections were completed before sending it to the fab.
 
 # ACKNOWLEDGEMENT:  
-1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this workshop and help understand VLSI design flow process both theoritically and practically.  
-2) I would also like to thank Ms. Lakshmi S. for providing access to spice files ([8x PLL Clock Multiplier IP](https://github.com/lakshmi-sathi/avsdpll_1v8)) and guidance throughout for the implementation of PLL system.  
-3) For understanding open-source tools provided during workshop, I referred [Skywater](https://www.skywatertechnology.com/), [Efabless](https://efabless.com/), [Ngspice](http://ngspice.sourceforge.net/) and [Magic](http://opencircuitdesign.com/magic/) ; which also helped in my progress through lab sessions.  
-4) Lastly, I appreciate the TAs for clarifying my doubts without whom this work would not have been made presentable.  
+1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
+2) [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)    
+3) I would like to thank [Synopsys](https://www.synopsys.com/) Team/Company for providing access to the server and 28nm iPDK CMOS library for implementing the design.
+4) I would also like to thank Mr. Sameer Durgoji, NIT Karnataka and Chinmay Panda, IIT Hyderabad for providing necessary video tutorials to use Synopsys custom compiler with ease.  
+5) Lastly, I appreciate the TAs for clarifying my doubts without whom this work would not have been made presentable.  
+
+# REFERENCES:
+1) A. M. Abo and P. R. Gray, "A 1.5-V, 10-bit, 14.3-MS/s CMOS pipeline analog-to-digital converter," in IEEE Journal of Solid-State Circuits, vol. 34, no. 5, pp. 599-606, May 1999.  
+2) D. Aksin, M. Al-Shyoukh and F. Maloberti, "Switch Bootstrapping for Precise Sampling Beyond Supply Voltage," in IEEE Journal of Solid-State Circuits, vol. 41, no. 8, pp. 1938-1943, Aug. 2006  
+3) B. Razavi, “The Bootstrapped Switch [A Circuit for All Seasons]”, in IEEE Solid-State Circuits Magazine, vol. 7, no. 3, pp. 12-15, Summer 2015  
