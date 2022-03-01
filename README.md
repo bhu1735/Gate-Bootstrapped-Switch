@@ -152,7 +152,7 @@ The netlist for inverter can be found here: [Netlist_Inverter.txt](https://githu
 The netlist for gate-boostrapped switch can be found here: [Netlist_Switch.txt](https://github.com/bhu1735/Gate-Bootstrapped-Switch/files/8164545/Netlist_Switch.txt)  
 
 # Observations:  
-As can be observed from the simulations plots, the circuit switch tracks the input signal during one-half of clock cycle and holds the value during other half which was expected from theory.  
+As can be observed from the simulations plots, the circuit switch tracks the input signal during one-half of clock cycle and holds the value during other half which was expected from theory. Further, as we zoom into the plots, we observed that the pedestial error is very low (of the order of few 100uV) but there is a time lag between the input signal and output track signal (of the order of nano-seconds). This may be due to the parasitic elements present in the design. Increasing the width of the sampling gate helps reduce the time lag between the input and output. On other hand, the pedestial error can be reduced by increasing load/hold capacitance CH at the cost of reduced bandwidth.  
 
 # Challenges:  
 Some challenges associated with the bootstrapped switch are:  
@@ -163,7 +163,7 @@ Some challenges associated with the bootstrapped switch are:
 NOTE: By increasing the capacitance CH, one can mitigate the above two affects at the cost of reduced bandwidth.  
 
 # Summary:  
-As a part of this cloud-based analog ic design hackathon, a gate-boostrapped switch has been designed using 28nm Synopsys iPDK library. The output tracks the input waveform during one-half of the clock cycle and holds the value during other half.  
+As a part of this cloud-based analog ic design hackathon, a gate-boostrapped switch has been designed using 28nm Synopsys iPDK library. The output tracks the input waveform during one-half of the clock cycle ('HIGH') and holds the value during other half ('LOW'). However, there is a time lage between the input and output. We discussed some challenges associated with the design and the measures that one may take to mitigate the same. Netlist has also been generated for the bootstrap switch design.
 
 # Acknowledgement:  
 1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
