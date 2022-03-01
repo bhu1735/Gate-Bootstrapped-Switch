@@ -5,9 +5,30 @@
 
 
 # DESCRIPTION:  
-In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. PLL is a an important element that is found in radio, telecommunications, oscillators among others. In this regard, a 2-day workshop on Phase-Locked Loop (PLL) IC design by VSD-IAT was conducted from 31st July, 2021 to 1st August, 2021. The workshop covered the basic understanding of all the different blocks that make up a PLL. Using open-source tools such as Ngspice, Magic and Google-Skywater 130nm PDK; a 8x PLL clock multiplier IC was designed. Both pre-layout and post-layout simulations were carried out and detailed analysis was done to get an intuitive understanding of VLSI design flow (starts from device level to tapeout stage). For the tapeout stage, the latest Caravel SoC template was used to make the IP ready for fabrication.  Basic understanding of electric circuits is beneficial for a beginner.
+In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. Hence, it is important to understand the importance of analog design aspects. In this regard, a 2-week online cloud-based analog IC design hackathon by IITH and VSD-IAT supervised by Synopsys India was conducted from 15th February, 2022 to 1st March, 2022. The hackathon covered the basic understanding of all the different blocks that make up a PLL. Using Synopsys custom compiler and 28nm CMOS PDK, a gate-bootstrapped switch for sample and hold circuit was designed. Basic understanding of electric circuits is beneficial for a beginner. Switches form one of the main building blocks of many analog systems. They help to track and hold values of input continuous time data that is then analyzed digitally. In this paper, we have designed a gate bootstrapped switch for a sample and hold circuit using 28nm Synopsys iPDK. 
 
 # CONTENTS:
+- [Abstract](#abstract):  
+- [Introduction](#introduction):  
+- [Reference Circuit Details](#reference-circuit-details)  
+- [Reference Circuit Waveforms](#reference-circuit-waveforms)  
+- [Tools Used](#tools-used)  
+- [Pre-Layout Schematics](#pre-layout-schematics)  
+  - [Inverter](#inverter)  
+  - [Gate Boostrapped Switch](#gate-boostrapped-switch)  
+- [Simulation Analysis](#simulation-analysis)  
+  - [Parameters for Sources](#parameters-for-sources)  
+  - [Transient Settings](#transient-settings)  
+  - [Inverter](#inverter)  
+  - [Gate Boostrapped Switch](#gate-boostrapped-switch)  
+- [Netlist](#netlist)
+- [Observations](#observations)
+- [Limitations](#limitations)
+- [Summary](#summary)  
+- [Acknowledgement](#acknowledgement) 
+- [References](#references) 
+  
+
 - [Day 1](#day-1):  
   - [PLL Theory](#pll-theory)  
   - [Phase-Frequency Detector (PFD)](#phase-frequency-detector-pfd)  
