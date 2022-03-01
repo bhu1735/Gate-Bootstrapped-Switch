@@ -126,10 +126,13 @@ The testbench for the bootstrap switch is as shown below:
 
 To test the functionality of the bootstrap switch, the parameters for the various sources are shown below:  
 
+1) Supply voltage VDC:  
 <img width="148" alt="Switch_vdc" src="https://user-images.githubusercontent.com/88243788/156241534-c72f221a-f13c-47a8-9817-8d3b2ecc75cd.png">
 
+2) Clock Clk:  
 <img width="148" alt="Switch_clk" src="https://user-images.githubusercontent.com/88243788/156241570-c40b0c1c-dcd8-4bf3-8131-5829edacca74.png">
 
+3) Input sinusoidal signal Vin:  
 <img width="148" alt="Switch_input" src="https://user-images.githubusercontent.com/88243788/156241587-d68c98e9-9e0e-4340-919d-077885bfb660.png">
 
 The transient settings are shown below:  
