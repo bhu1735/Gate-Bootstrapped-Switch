@@ -118,13 +118,13 @@ The required waveforms generated are shown below:
 <img width="960" alt="Inv_results" src="https://user-images.githubusercontent.com/88243788/156241291-2c585b02-92d6-498a-ad24-ad63a0d9c914.png">
 
 ## Gate-Bootstrapped Switch:  
-The testbench for the inverter is as shown below:  
+The testbench for the bootstrap switch is as shown below:  
 
 <p align="center">
   <img width="434" alt="Switch_tb" src="https://user-images.githubusercontent.com/88243788/156241420-8917a9c8-c343-4905-9be7-cb27294de490.png">  
 </p>
 
-To test the functionality of the inverter, the parameters for the various sources are shown below:  
+To test the functionality of the bootstrap switch, the parameters for the various sources are shown below:  
 
 <img width="148" alt="Switch_vdc" src="https://user-images.githubusercontent.com/88243788/156241534-c72f221a-f13c-47a8-9817-8d3b2ecc75cd.png">
 
