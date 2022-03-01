@@ -45,13 +45,13 @@ The role of various transistors has been specified below:
 - Clk: Track/sample phase. When Clk is HIGH, the capacitor C3 acts as a battery.  
 - Clk_bar: Hold phase  
 - M1: Main sampling switch  
-- M2: Used alongside switches M5 & M6 to ensure the capacitor C2 acts as a battery during track phase. During sampling, this switch will be closed. This can be implemented using CMOS switch because input VIN ranges from 0 to VDD. Another way is to use NMOS switch with gate connected to gate of M1 to provide the required boosted gate voltage.  
+- M5: Used alongside switches M7 & M8 to ensure the capacitor C2 acts as a battery during track phase. During sampling, this switch will be closed. This can be implemented using CMOS switch because input VIN ranges from 0 to VDD. Another way is to use NMOS switch with gate connected to gate of M1 to provide the required boosted gate voltage.  
 - M3: Used alongside switch M4 to ensure the capacitor C2 gets charged to VDD during hold phase. It can be implemented using NMOS because it is connecting C2 to ground.  
-- M4: Implemented using PMOS because it is connected to VDD. Its gate terminal is connected to VG to ensure the switch is OFF during track phase.  
-- M5: Implemented using PMOS because it is connected to VDD.  
-- M6: Implemented using NMOS because it is connected to VDD.  
-- M7: Used to provide protection to switch M6. This is because when M6 is OFF, it has a large drain-to-source voltage (VDS = VDD + VIN). This affects the reliability of the device and its lifetime will come down. M6 helps ease this by reducing VDS to a nominal value.  
-- C3: Used to act as a battery during track phase and to get charged during hold phase.  
+- M6: Used to provide protection to switch M7. This is because when M7   is OFF, it has a large drain-to-source voltage (VDS = VDD + VIN). This affects the reliability of the device and its lifetime will come down. M6 helps ease this by reducing VDS to a nominal value. It is implemented using NMOS because it is connected to VDD.  
+- M6 and M7 provide the discharging path for node Vgate of M1 to ground.  
+- M2 helps ensure that the node Vgate tracks the input voltage shifted by VDD thereby keeping Vgs across M1 constant.  
+- C3: Used to act as a battery during track phase and to get charged during hold phase. It gets charged to VDD through transistors M9 and M10 during hold phase.  
+- M11, M12, C1 and C2 form a clock multiplier known as Nakagome charge pump that ensures transistor M9 charges capacitor C3 during hold phase.
 
 
 # Reference Circuit Waveforms:  
