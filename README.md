@@ -74,16 +74,18 @@ Since 1950s, transistors have been used as switches in analog circuits. They fin
 
 However, such devices exhibit an input-dependent ON-resistance RON, thereby introducing distortion. Such switches are non-linear in nature and require modifications to linearize the switch. The only way the ON resistance of the switch is going to be constant is by making sure that the gate to source voltage VGS is constant for all values of input voltage. This technique is called “bootstrapping” that helps minimize the variation in RON with input voltage.  
 
+Bootstrapping is a widely used technique in analog to digital converters (ADCs). In high speed ADCs, it is important to collect precise sample values in a very short time to get a digital output and ensure an accurate charging of the sampling capacitor. In this regards, a gate-bootstrapped switch was designed that uses Nakagome charge pump that acts as a voltage shifter or doubler.  
+
 # Reference Circuit Details:  
-Bootstrapping is a widely used technique in analog to digital converters (ADCs). In high speed ADCs, it is important to collect precise sample values in a very short time to get a digital output and ensure an accurate charging of the sampling capacitor [2]. In this regards, a gate-bootstrapped switch was designed [1] that uses Nakagome charge pump that acts as a voltage shifter or doubler.  
-The basic block diagram of PLL system is shown below:  
+The reference circuit has been shown in the figure below. It has been previously implemented in 0.6μm CMOS technology. The purpose of this research work is to implement the same in 28nm Synopsys iPDK library and analyze the outputs. Transient analysis has been done to check the efficacy of the aforementioned circuit. The results are shown in next section.  
+
 ![image](https://user-images.githubusercontent.com/88243788/156187307-394a1e18-47df-4b83-9dff-fc81e0db27da.jpg)
 
-![image](https://user-images.githubusercontent.com/88243788/127889747-a5af5d86-3a1b-4aa4-b11e-f2ac80665eb0.png)
+# Reference Circuit Waveforms:  
 
-Usually, to generate clock signal, either Quartz crystals or Voltage-controlled oscillators (VCOs) is used depending on the application. VCOs offer good flexibility and better control frequency with input voltage. They are mostly used for on-chip applications. However, they are susceptible to noise and/or fluctuations in their phase. This is refered to as Phase noise. On the other hand, Quartz crystals provide superior spectral purity and no unwanted frequency.
+![image](https://user-images.githubusercontent.com/88243788/156188181-747c895a-17e4-411b-8be4-4f1efd482f78.jpg)
 
-Note: Spectral purity refers to a frequency spectrum having least amount of unwanted frequencies.  
+As can be seen in the waveforms above, the output waveform tracks the input in half the clock cycle duration and holds the sampled value in other half clock cycle.  
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/88243788/127888401-0b01a658-bb59-4ba7-be69-f6ab26f13692.png">  
