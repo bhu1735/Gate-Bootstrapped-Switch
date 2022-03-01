@@ -160,7 +160,7 @@ Some challenges associated with the bootstrapped switch are:
 
 NOTE: By increasing the capacitance CH, one can mitigate the above two affects at the cost of reduced bandwidth.  
 
-# Conclusions:  
+# Summary:  
 As a part of this cloud-based analog ic design hackathon, a gate-boostrapped switch has been designed using 28nm Synopsys iPDK library. The output tracks the input waveform during one-half of the clock cycle and holds the value during other half.  
 
 # Acknowledgement:  
