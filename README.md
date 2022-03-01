@@ -1,8 +1,5 @@
 # GATE-BOOTSTRAPPED SWITCH USING 28nm SYNOPSYS iPDK
 
-![PLL-Workshop-Banner_efabless](https://user-images.githubusercontent.com/88243788/127843029-c984bcd3-031e-4d7c-9a2b-687ffbf2afe2.png)
-
-
 # DESCRIPTION:  
 In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. Hence, it is important to understand the importance of analog design aspects. In this regard, a 2-week online cloud-based analog IC design hackathon by IITH and VSD-IAT supervised by Synopsys India was conducted from 15th February, 2022 to 1st March, 2022. The hackathon covered the basic understanding of all the different blocks that make up a PLL. Using Synopsys custom compiler and 28nm CMOS PDK, a gate-bootstrapped switch for sample and hold circuit was designed. Basic understanding of electric circuits is beneficial for a beginner.
 
@@ -88,7 +85,7 @@ As can be seen in the waveforms above, the output waveform tracks the input in h
 # Tools Used:  
 Following are the tools used for the design during the hackathon:
 1) Synopsys Custom Compiler
-2) Prime Wave for simulations
+2) Synopsys Prime Wave for simulations
 3) 28nm iPDK library provided by Synopsys India
 
 We shall now look into the circuit schematics of above design and simulate it using 28nm iPDK library.  
