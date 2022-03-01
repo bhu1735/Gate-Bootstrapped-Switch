@@ -1,5 +1,4 @@
 # GATE-BOOTSTRAPPED SWITCH USING 28nm SYNOPSYS iPDK
-# PHASE-LOCKED LOOP IC DESIGN USING SKY130 PDK
 
 ![PLL-Workshop-Banner_efabless](https://user-images.githubusercontent.com/88243788/127843029-c984bcd3-031e-4d7c-9a2b-687ffbf2afe2.png)
 
