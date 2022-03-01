@@ -5,22 +5,22 @@
 
 
 # DESCRIPTION:  
-In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. Hence, it is important to understand the importance of analog design aspects. In this regard, a 2-week online cloud-based analog IC design hackathon by IITH and VSD-IAT supervised by Synopsys India was conducted from 15th February, 2022 to 1st March, 2022. The hackathon covered the basic understanding of all the different blocks that make up a PLL. Using Synopsys custom compiler and 28nm CMOS PDK, a gate-bootstrapped switch for sample and hold circuit was designed. Basic understanding of electric circuits is beneficial for a beginner. Switches form one of the main building blocks of many analog systems. They help to track and hold values of input continuous time data that is then analyzed digitally. In this paper, we have designed a gate bootstrapped switch for a sample and hold circuit using 28nm Synopsys iPDK. 
+In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. Hence, it is important to understand the importance of analog design aspects. In this regard, a 2-week online cloud-based analog IC design hackathon by IITH and VSD-IAT supervised by Synopsys India was conducted from 15th February, 2022 to 1st March, 2022. The hackathon covered the basic understanding of all the different blocks that make up a PLL. Using Synopsys custom compiler and 28nm CMOS PDK, a gate-bootstrapped switch for sample and hold circuit was designed. Basic understanding of electric circuits is beneficial for a beginner.
 
 # CONTENTS:
-- [Abstract](#abstract):  
-- [Introduction](#introduction):  
+- [Abstract](#abstract)  
+- [Introduction](#introduction)  
 - [Reference Circuit Details](#reference-circuit-details)  
 - [Reference Circuit Waveforms](#reference-circuit-waveforms)  
 - [Tools Used](#tools-used)  
 - [Pre-Layout Schematics](#pre-layout-schematics)  
   - [Inverter](#inverter)  
-  - [Gate Boostrapped Switch](#gate-boostrapped-switch)  
+  - [Gate-Boostrapped Switch](#gate-boostrapped-switch)  
 - [Simulation Analysis](#simulation-analysis)  
   - [Parameters for Sources](#parameters-for-sources)  
   - [Transient Settings](#transient-settings)  
   - [Inverter](#inverter)  
-  - [Gate Boostrapped Switch](#gate-boostrapped-switch)  
+  - [Gate-Boostrapped Switch](#gate-boostrapped-switch)  
 - [Netlist](#netlist)
 - [Observations](#observations)
 - [Limitations](#limitations)
@@ -67,9 +67,12 @@ In the current era of information, analog domain has become a challenging and an
 - [References](#references) 
   
 
-# Day 1:  
-## PLL Theory:  
-A phase-locked loop (PLL) is a control system that compares the phase of input reference signal and output desired signal through a feedback loop. The goal of PLL system is to generate a very precise clock signal without frequency fluctuations or phase noise and at the same time have the flexibility of running at the desired frequency. The output gets "locked" with the input reference signal, when the phase difference between the two signals is 0. This means that the output mimics the reference to have the same or a multiple of the reference signal frequency and a constant phase difference with it.  
+# Abstract:  
+Switches form one of the main building blocks of many analog systems. They help to track and hold values of input continuous time data that is then analyzed digitally. In this paper, we have designed a gate bootstrapped switch for a sample and hold circuit using 28nm Synopsys iPDK.  
+
+# Introduction:  
+Since 1950s, transistors have been used as switches in analog circuits. They find a wide variety of applications including DC-DC converters, analog to digital data converters, etc. To operate as a switch, transistors should intend to work in triode region. In triode region, the ON-resistance of transistor is defined as,  
+
 
 The basic block diagram of PLL system is shown below:  
 
