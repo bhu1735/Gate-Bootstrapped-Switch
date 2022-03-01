@@ -40,7 +40,7 @@ Bootstrapping is a widely used technique in analog to digital converters (ADCs).
 # Reference Circuit Details:  
 The reference circuit has been shown in the figure below. It has been previously implemented in 0.6μm CMOS technology. The purpose of this research work is to implement the same in 28nm Synopsys iPDK library and analyze the outputs. Transient analysis has been done to check the efficacy of the aforementioned circuit. The results are shown in next section.  
 
-![image](https://user-images.githubusercontent.com/88243788/156187307-394a1e18-47df-4b83-9dff-fc81e0db27da.jpg)
+![image](https://user-images.githubusercontent.com/88243788/156187307-394a1e18-47df-4b83-9dff-fc81e0db27da.jpg)  
 
 The role of various transistors has been specified below:  
 - Clk: Track/sample phase. When Clk is HIGH, the capacitor C3 acts as a battery.  
@@ -57,7 +57,7 @@ The role of various transistors has been specified below:
 
 # Reference Circuit Waveforms:  
 
-![image](https://user-images.githubusercontent.com/88243788/156188181-747c895a-17e4-411b-8be4-4f1efd482f78.jpg)
+![image](https://user-images.githubusercontent.com/88243788/156188181-747c895a-17e4-411b-8be4-4f1efd482f78.jpg)  
 
 As can be seen in the waveforms above, the output waveform tracks the input in half the clock cycle duration and holds the sampled value in other half clock cycle.  
 
@@ -73,26 +73,36 @@ We shall now look into the circuit schematics of above design and simulate it us
 ## Inverter:  
 The schematic of inverter is as shown below:  
 
-<img width="397" alt="Inv_circuit" src="https://user-images.githubusercontent.com/88243788/156240838-719de82f-a0a5-40f8-9564-adb715b44df3.png">
+<p align="center">
+  <img width="397" alt="Inv_circuit" src="https://user-images.githubusercontent.com/88243788/156240838-719de82f-a0a5-40f8-9564-adb715b44df3.png">  
+</p>
 
 The symbol for the same is shown below:  
 
-<img width="370" alt="Inv_symbol" src="https://user-images.githubusercontent.com/88243788/156240915-072707b0-b19b-4cf8-9ce4-a16ea403986d.png">
+<p align="center">
+  <img width="370" alt="Inv_symbol" src="https://user-images.githubusercontent.com/88243788/156240915-072707b0-b19b-4cf8-9ce4-a16ea403986d.png">  
+</p>
 
 ## Gate-Bootstrapped Switch:  
 The schematic of gate-bootstrapped switch is as shown below:  
 
-<img width="582" alt="Switch_circuit" src="https://user-images.githubusercontent.com/88243788/156240979-4f558412-c737-43b4-82ad-aaf6798f20bf.png">
+<p align="center">
+  <img width="582" alt="Switch_circuit" src="https://user-images.githubusercontent.com/88243788/156240979-4f558412-c737-43b4-82ad-aaf6798f20bf.png">  
+</p>
 
 The symbol for the same is shown below:  
 
-<img width="463" alt="Switch_symbol" src="https://user-images.githubusercontent.com/88243788/156241012-8ddcfb88-a7fd-4d50-84cc-2932e361e3cd.png">
+<p align="center">
+  <img width="463" alt="Switch_symbol" src="https://user-images.githubusercontent.com/88243788/156241012-8ddcfb88-a7fd-4d50-84cc-2932e361e3cd.png">  
+</p>
 
 # Simulation Analysis:  
 ## Inverter:  
 The testbench for the inverter is as shown below:  
 
-<img width="524" alt="Inv_tb" src="https://user-images.githubusercontent.com/88243788/156241137-e9df7b5f-ed17-40ca-96a1-eeefe7d3f0c0.png">
+<p align="center">
+  <img width="524" alt="Inv_tb" src="https://user-images.githubusercontent.com/88243788/156241137-e9df7b5f-ed17-40ca-96a1-eeefe7d3f0c0.png">  
+</p>
 
 To test the functionality of the inverter, the parameter for the source at the input is shown below:  
 
@@ -111,7 +121,9 @@ The required waveforms generated are shown below:
 ## Gate-Bootstrapped Switch:  
 The testbench for the inverter is as shown below:  
 
-<img width="434" alt="Switch_tb" src="https://user-images.githubusercontent.com/88243788/156241420-8917a9c8-c343-4905-9be7-cb27294de490.png">
+<p align="center">
+  <img width="434" alt="Switch_tb" src="https://user-images.githubusercontent.com/88243788/156241420-8917a9c8-c343-4905-9be7-cb27294de490.png">  
+</p>
 
 To test the functionality of the inverter, the parameters for the various sources are shown below:  
 
