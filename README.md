@@ -29,6 +29,8 @@ Switches form one of the main building blocks of many analog systems. They help 
 # Introduction:  
 Since 1950s, transistors have been used as switches in analog circuits. They find a wide variety of applications including DC-DC converters, analog to digital data converters, etc. To operate as a switch, transistors should intend to work in triode region. In triode region, the ON-resistance of transistor is defined as,  
 
+R_ON=1/(μ_n C_ox (W/L)(V_GS-V_TH ) )  
+
 However, such devices exhibit an input-dependent ON-resistance RON, thereby introducing distortion. Such switches are non-linear in nature and require modifications to linearize the switch. The only way the ON resistance of the switch is going to be constant is by making sure that the gate to source voltage VGS is constant for all values of input voltage. This technique is called “bootstrapping” that helps minimize the variation in RON with input voltage.  
 
 Bootstrapping is a widely used technique in analog to digital converters (ADCs). In high speed ADCs, it is important to collect precise sample values in a very short time to get a digital output and ensure an accurate charging of the sampling capacitor. In this regards, a gate-bootstrapped switch was designed that uses Nakagome charge pump that acts as a voltage shifter or doubler.  
