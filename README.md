@@ -43,7 +43,7 @@ The reference circuit has been shown in the figure below. It has been previously
 ![image](https://user-images.githubusercontent.com/88243788/156187307-394a1e18-47df-4b83-9dff-fc81e0db27da.jpg)
 
 The role of various transistors has been specified below:  
-- Clk: Track/sample phase. When Clk is HIGH, the capacitor C2 acts as a battery.  
+- Clk: Track/sample phase. When Clk is HIGH, the capacitor C3 acts as a battery.  
 - Clk_bar: Hold phase  
 - M1: Main sampling switch  
 - M2: Used alongside switches M5 & M6 to ensure the capacitor C2 acts as a battery during track phase. During sampling, this switch will be closed. This can be implemented using CMOS switch because input VIN ranges from 0 to VDD. Another way is to use NMOS switch with gate connected to gate of M1 to provide the required boosted gate voltage.  
@@ -52,7 +52,7 @@ The role of various transistors has been specified below:
 - M5: Implemented using PMOS because it is connected to VDD.  
 - M6: Implemented using NMOS because it is connected to VDD.  
 - M7: Used to provide protection to switch M6. This is because when M6 is OFF, it has a large drain-to-source voltage (VDS = VDD + VIN). This affects the reliability of the device and its lifetime will come down. M6 helps ease this by reducing VDS to a nominal value.  
-- C2: Used to act as a battery during track phase and to get charged during hold phase.  
+- C3: Used to act as a battery during track phase and to get charged during hold phase.  
 
 
 # Reference Circuit Waveforms:  
