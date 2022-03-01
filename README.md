@@ -29,7 +29,11 @@ Switches form one of the main building blocks of many analog systems. They help 
 # Introduction:  
 Since 1950s, transistors have been used as switches in analog circuits. They find a wide variety of applications including DC-DC converters, analog to digital data converters, etc. To operate as a switch, transistors should intend to work in triode region. In triode region, the ON-resistance of transistor is defined as,  
 
-<img width="168" alt="Equation" src="https://user-images.githubusercontent.com/88243788/156207030-c2d50d27-ac09-4262-8e72-2c4f52c40df0.PNG">
+<p align="center">
+  <img width="168" alt="Equation" src="https://user-images.githubusercontent.com/88243788/156207030-c2d50d27-ac09-4262-8e72-2c4f52c40df0.PNG">  
+</p>
+
+
 
 
 R_ON=1/(μ_n C_ox (W/L)(V_GS-V_TH ) )  
