@@ -16,8 +16,6 @@ In the current era of information, analog domain has become a challenging and an
   - [Inverter](#inverter)  
   - [Gate-Boostrapped Switch](#gate-boostrapped-switch)  
 - [Simulation Analysis](#simulation-analysis)  
-  - [Parameters for Sources](#parameters-for-sources)  
-  - [Transient Settings](#transient-settings)  
   - [Inverter](#inverter)  
   - [Gate-Boostrapped Switch](#gate-boostrapped-switch)  
 - [Netlist](#netlist)
@@ -87,11 +85,69 @@ The reference circuit has been shown in the figure below. It has been previously
 
 As can be seen in the waveforms above, the output waveform tracks the input in half the clock cycle duration and holds the sampled value in other half clock cycle.  
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/88243788/127888401-0b01a658-bb59-4ba7-be69-f6ab26f13692.png">  
-</p>
+# Tools Used:  
+Following are the tools used for the design during the hackathon:
+1) Synopsys Custom Compiler
+2) Prime Wave for simulations
+3) 28nm iPDK library provided by Synopsys India
 
-We shall now look into each block of the PLL system and understand its functionality:
+We shall now look into the circuit schematics of above design and simulate it using 28nm iPDK library.  
+
+# Pre-Layout Schematics:  
+## Inverter:  
+The schematic of inverter is as shown below:  
+
+The symbol for the same is shown below:  
+
+## Gate-Bootstrapped Switch:  
+The schematic of gate-bootstrapped switch is as shown below:  
+
+The symbol for the same is shown below:  
+
+# Simulation Analysis:  
+## Inverter:  
+To test the functionality of the inverter, the parameter for the souce at the input is shown below:  
+
+The transient setting are shown below:  
+
+The required waveforms generated are shown below:  
+
+## Gate-Bootstrapped Switch:  
+To test the functionality of the inverter, the parameter for the souce at the input is shown below:  
+
+The transient setting are shown below:  
+
+The required waveforms generated are shown below:  
+
+# Netlist:
+
+
+# Observations:
+
+# Challenges:
+Sizing of the transistors during the gate-boostrapped switch design was quite challenging to get the required waveforms.
+
+# Limitations:
+
+# Conclusions:
+
+# ACKNOWLEDGEMENT:  
+1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
+2) [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)    
+3) I would like to thank [Synopsys](https://www.synopsys.com/) Team/Company for providing access to the server and 28nm iPDK CMOS library for implementing the design.
+4) I would also like to thank Mr. Sameer Durgoji, NIT Karnataka and Chinmay Panda, IIT Hyderabad for providing necessary video tutorials to use Synopsys custom compiler with ease.  
+5) Lastly, I appreciate the TAs for clarifying my doubts without whom this work would not have been made presentable.  
+
+# REFERENCES:
+1) A. M. Abo and P. R. Gray, "A 1.5-V, 10-bit, 14.3-MS/s CMOS pipeline analog-to-digital converter," in IEEE Journal of Solid-State Circuits, vol. 34, no. 5, pp. 599-606, May 1999.  
+2) D. Aksin, M. Al-Shyoukh and F. Maloberti, "Switch Bootstrapping for Precise Sampling Beyond Supply Voltage," in IEEE Journal of Solid-State Circuits, vol. 41, no. 8, pp. 1938-1943, Aug. 2006  
+3) B. Razavi, “The Bootstrapped Switch [A Circuit for All Seasons]”, in IEEE Solid-State Circuits Magazine, vol. 7, no. 3, pp. 12-15, Summer 2015  
+
+
+
+
+
+
 
 ## Phase-Frequency Detector (PFD):  
 It is used to to compare the frequency divided by 8 signal and the reference input signal. Using XOR function, one cannot distinguish between leading and lagging nature of input or output. To this extent, one introduces 2 additional signals: UP and DOWN that tell when the output signal needs to be sped up or slowed down respectively. Also, the width of output signal pulse tells to what extent the phase difference needs to be increased or decreased.  
@@ -435,14 +491,3 @@ The caravel user project area contains the input-output pins (fixed) along the b
 # SUMMARY:
 In this workshop, we started with the basic understanding of the various blocks used to design a phase-locked loop (PLL) system. Circuits were designed based on established specifications to get desired response. This was followed by pre-layout simulations using ngspice to the confirm the expected results and debug the individual components in case of error. However, in doing this, we chose to neglect the effect of the interconnections (length, width, area), mismatch, etc. As such, a layout of the circuit was designed using magic tool which was followed by parasitic extractions. This generated a SPICE netlist of the entire circuit. Post-layout simulations were then carried out which gave a more accurate result for the PLL. Finally, to make the PLL IP tapeout ready, the final layout design was prepared using caravel soc template provided by efabless. The design was placed on the user's project area and connections were completed before sending it to the fab.
 
-# ACKNOWLEDGEMENT:  
-1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
-2) [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)    
-3) I would like to thank [Synopsys](https://www.synopsys.com/) Team/Company for providing access to the server and 28nm iPDK CMOS library for implementing the design.
-4) I would also like to thank Mr. Sameer Durgoji, NIT Karnataka and Chinmay Panda, IIT Hyderabad for providing necessary video tutorials to use Synopsys custom compiler with ease.  
-5) Lastly, I appreciate the TAs for clarifying my doubts without whom this work would not have been made presentable.  
-
-# REFERENCES:
-1) A. M. Abo and P. R. Gray, "A 1.5-V, 10-bit, 14.3-MS/s CMOS pipeline analog-to-digital converter," in IEEE Journal of Solid-State Circuits, vol. 34, no. 5, pp. 599-606, May 1999.  
-2) D. Aksin, M. Al-Shyoukh and F. Maloberti, "Switch Bootstrapping for Precise Sampling Beyond Supply Voltage," in IEEE Journal of Solid-State Circuits, vol. 41, no. 8, pp. 1938-1943, Aug. 2006  
-3) B. Razavi, “The Bootstrapped Switch [A Circuit for All Seasons]”, in IEEE Solid-State Circuits Magazine, vol. 7, no. 3, pp. 12-15, Summer 2015  
