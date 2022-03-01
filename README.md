@@ -140,6 +140,8 @@ The required waveforms generated are shown below:
 
 <img width="960" alt="Switch_results" src="https://user-images.githubusercontent.com/88243788/156241680-981ca1c8-7282-408f-b106-1f5bb7baab8d.png">
 
+One can zoom in to see how accurately the output tracks the input as shown below:  
+
 <img width="960" alt="Switch_results2" src="https://user-images.githubusercontent.com/88243788/156241699-6334ea99-0d62-4821-8d82-90f5eb566ead.png">
 
 <img width="960" alt="Switch_results3" src="https://user-images.githubusercontent.com/88243788/156241723-3bee03f0-ebfe-403e-98f8-6b12a150c8ff.png">
