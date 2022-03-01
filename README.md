@@ -82,22 +82,24 @@ The transient setting are shown below:
 
 The required waveforms generated are shown below:  
 
-# Netlist:
+# Netlist:  
 
 
-# Observations:
+# Observations:  
+As can be observed from the simulations plots, the circuit switch tracks the input signal during one-half of clock cycle and holds the value during other half which was expected from theory.  
 
-# Challenges:
+# Challenges:  
 Some challenges associated with the bootstrapped switch are:  
 1) Sizing of the transistors during the gate-boostrapped switch design was quite challenging to get the required waveforms.  
-2) Charge Injection: When clock is goes from HIGH to LOW, the charge that was present in the channel (when clock was HIGH), escapes to the source and drain side of the switch M1. So, some amount of charge will get deposited on the hold capacitance C1 of Figure 3. This causes change in the actual voltage of the capacitor that is meant to be digitized as additional charges (due to charge leakage) get deposited on C1. One can use a dummy switch in series to M1 to reduce this affect. The dummy switch and M1 operate with out-of-phase clocks.  
-3) Clock Feedthrough: During clock transition from HIGH to LOW, there is some overlap capacitance between gate and drain. This capacitance VOV forms a voltage divider with C1 which again causes change in the actual voltage of the capacitor output. Different voltage value gets digitized due to clock transitions.  
+2) Charge Injection: When clock is goes from HIGH to LOW, the charge that was present in the channel (when clock was HIGH), escapes to the source and drain side of the switch M1. So, some amount of charge will get deposited on the hold capacitance CH. This causes change in the actual voltage of the capacitor that is meant to be digitized as additional charges (due to charge leakage) get deposited on CH. One can use a dummy switch in series to M1 to reduce this affect. The dummy switch and M1 operate with out-of-phase clocks.  
+3) Clock Feedthrough: During clock transition from HIGH to LOW, there is some overlap capacitance between gate and drain. This capacitance Cov forms a voltage divider with CH which again causes change in the actual voltage of the capacitor output. Different voltage value gets digitized due to clock transitions.  
 
-NOTE: By increasing the capacitance C1, one can mitigate the above two affects at the cost of reduced bandwidth.  
+NOTE: By increasing the capacitance CH, one can mitigate the above two affects at the cost of reduced bandwidth.  
 
-# Limitations:
+# Limitations:  
 
-# Conclusions:
+# Conclusions:  
+As a part of this cloud-based analog ic design hackathon, a gate-boostrapped switch has been designed using 28nm Synopsys iPDK library. The output tracks the input waveform during one-half of the clock cycle and holds the value during other half.  
 
 # Acknowledgement:  
 1) I would like to express my thanks of gratitude to Mr. Kunal Ghosh (Co-founder [VSD](https://www.vlsisystemdesign.com/) Corp. Pvt. Ltd.), for providing me an opportunity to partake in this hackathon and help understand VLSI design flow process both theoritically and practically.  
