@@ -1,7 +1,7 @@
 # GATE-BOOTSTRAPPED SWITCH USING 28nm SYNOPSYS iPDK
 
 # DESCRIPTION:  
-In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. Hence, it is important to understand the importance of analog design aspects. In this regard, a 2-week online cloud-based analog IC design hackathon by IITH and VSD-IAT supervised by Synopsys India was conducted from 15th February, 2022 to 1st March, 2022. The hackathon covered the basic understanding of all the different blocks that make up a PLL. Using Synopsys custom compiler and 28nm CMOS PDK, a gate-bootstrapped switch for sample and hold circuit was designed. Basic understanding of electric circuits is beneficial for a beginner.
+In the current era of information, analog domain has become a challenging and an important part of IC design. Almost all electronic systems are susceptible to noise and mismatch. Hence, it is important to understand the importance of analog design aspects. In this regard, a 2-week online cloud-based analog IC design hackathon by IITH and VSD-IAT supervised by Synopsys India was conducted from 15th February, 2022 to 1st March, 2022. The hackathon required the VLSI enthusiasts to understand and design an analog circuit of their choice using cloud-based server. Using Synopsys custom compiler and 28nm CMOS PDK, a gate-bootstrapped switch for sample and hold circuit was designed. Basic understanding of electric circuits is beneficial for a beginner.
 
 # CONTENTS:
 - [Abstract](#abstract)  
