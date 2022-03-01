@@ -74,6 +74,7 @@ Since 1950s, transistors have been used as switches in analog circuits. They fin
 
 
 The basic block diagram of PLL system is shown below:  
+![image](https://user-images.githubusercontent.com/88243788/156187307-394a1e18-47df-4b83-9dff-fc81e0db27da.jpg)
 
 ![image](https://user-images.githubusercontent.com/88243788/127889747-a5af5d86-3a1b-4aa4-b11e-f2ac80665eb0.png)
 
