@@ -215,7 +215,6 @@ c2 out gnd! c=1p
 
 
 .end
-
 ```
 
 The netlist for gate-boostrapped switch can be found here: [Netlist_Switch.txt](https://github.com/bhu1735/Gate-Bootstrapped-Switch/files/8164545/Netlist_Switch.txt). It is also shown below for reference:  
@@ -312,7 +311,6 @@ c4 vout gnd! c=5p
 
 
 .end
-
 ```
 
 # Observations:  
